@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试网页 - 米橙色主题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #F5DEB3 0%, #DEB887 50%, #D2B48C 100%);
+            min-height: 100vh;
+            color: #5C4033;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #8B4513;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #654321;
+            font-weight: 300;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #DEB887;
+            padding-bottom: 10px;
+        }
+
+        .card p {
+            color: #5C4033;
+            line-height: 1.8;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            color: #654321;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #8B4513;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #DEB887 0%, #D2B48C 100%);
+            color: #5C4033;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #D2B48C 0%, #CD853F 100%);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            color: #654321;
+        }
+
+        .decorative-element {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #F5DEB3 0%, #DEB887 100%);
+            border-radius: 50%;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌾 米橙色主题测试网页</h1>
+            <p class="subtitle">温暖舒适的视觉体验</p>
+            <div class="decorative-element"></div>
+        </header>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2>设计特色</h2>
+                <p>采用温暖的米橙色系，营造舒适、优雅的视觉氛围。渐变背景与毛玻璃效果相结合，打造现代化的设计风格。</p>
+            </div>
+
+            <div class="card">
+                <h2>功能特点</h2>
+                <ul class="feature-list">
+                    <li>响应式布局设计</li>
+                    <li>流畅的动画效果</li>
+                    <li>优雅的卡片式布局</li>
+                    <li>现代化的UI设计</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>技术实现</h2>
+                <p>使用纯HTML和CSS构建，无需任何框架依赖。采用CSS Grid布局和Flexbox，确保在不同设备上都有良好的显示效果。</p>
+                <a href="#" class="button">了解更多</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 测试网页 | 米橙色主题设计</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">这是一个测试页面，用于展示米橙色主题的视觉效果</p>
+        </footer>
+    </div>
+</body>
+</html>
+
